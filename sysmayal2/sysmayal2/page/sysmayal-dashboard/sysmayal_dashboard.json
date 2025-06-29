@@ -4,7 +4,7 @@
  "modified": "2025-06-07 10:31:09.000000",
  "modified_by": "Administrator",
  "module": "sysmayal2",
- "name": "sysmayal-dashboard",
+ "name": "sysmayal_dashboard",
  "owner": "Administrator",
  "page_name": "Sysmayal Dashboard",
  "roles": [

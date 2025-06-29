@@ -9,7 +9,7 @@
  * - Certification documents
  */
 
-frappe.pages['sysmayal-dashboard'].on_page_load = function(wrapper) {
+frappe.pages['sysmayal_dashboard'].on_page_load = function(wrapper) {
     var page = frappe.ui.make_app_page({
         parent: wrapper,
         title: 'Sysmayal Dashboard',
@@ -136,8 +136,8 @@ class SysmayalDashboard {
     }
 
     add_dashboard_styles() {
-        if (!$('#sysmayal-dashboard-styles').length) {
-            $('<style id="sysmayal-dashboard-styles">').appendTo('head').text(`
+        if (!$('#sysmayal_dashboard-styles').length) {
+            $('<style id="sysmayal_dashboard-styles">').appendTo('head').text(`
                 .dashboard-container {
                     padding: 20px;
                 }
