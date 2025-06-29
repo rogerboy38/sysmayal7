@@ -72,7 +72,7 @@ min_erpnext_version = "15.0.0"
 # ------------
 
 # before_install = "sysmayal.install.before_install"
-after_install = "sysmayal.setup.install.after_install"
+after_install = "sysmayal2.setup.install.after_install"
 
 # Desk Notifications
 # ------------------
