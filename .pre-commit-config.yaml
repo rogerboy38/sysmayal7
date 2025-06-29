@@ -8,7 +8,7 @@ repos:
     rev: v5.0.0
     hooks:
       - id: trailing-whitespace
-        files: "sysmayal2.*"
+        files: "sysmayal.*"
         exclude: ".*json$|.*txt$|.*csv|.*md|.*svg"
       - id: check-merge-conflict
       - id: check-ast
@@ -38,11 +38,11 @@ repos:
         # Ignore any files that might contain jinja / bundles
         exclude: |
             (?x)^(
-                sysmayal2/public/dist/.*|
+                sysmayal/public/dist/.*|
                 .*node_modules.*|
                 .*boilerplate.*|
-                sysmayal2/templates/includes/.*|
-                sysmayal2/public/js/lib/.*
+                sysmayal/templates/includes/.*|
+                sysmayal/public/js/lib/.*
             )$
 
 
@@ -55,12 +55,12 @@ repos:
         # Ignore any files that might contain jinja / bundles
         exclude: |
             (?x)^(
-                sysmayal2/public/dist/.*|
+                sysmayal/public/dist/.*|
                 cypress/.*|
                 .*node_modules.*|
                 .*boilerplate.*|
-                sysmayal2/templates/includes/.*|
-                sysmayal2/public/js/lib/.*
+                sysmayal/templates/includes/.*|
+                sysmayal/public/js/lib/.*
             )$
 
 ci:
