@@ -1,0 +1,32 @@
+{
+ "creation": "2025-06-07 10:31:09.000000",
+ "doctype": "Page",
+ "modified": "2025-06-07 10:31:09.000000",
+ "modified_by": "Administrator",
+ "module": "sysmayal_module",
+ "name": "sysmayal-dashboard",
+ "owner": "Administrator",
+ "page_name": "Sysmayal Dashboard",
+ "roles": [
+  {
+   "role": "Distribution Manager"
+  },
+  {
+   "role": "Administrator"
+  },
+  {
+   "role": "R&D Manager"
+  },
+  {
+   "role": "Compliance Officer"
+  },
+  {
+   "role": "Data Entry Operator"
+  }
+ ],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 0,
+ "title": "Sysmayal Dashboard"
+}

@@ -1,0 +1,11 @@
+first_name,last_name,organization,designation,department,email_id,phone,mobile_no,country,regulatory_role,status,preferred_language,communication_preference,years_experience,certifications
+John,Smith,ABC Distribution Ltd,Sales Manager,Sales,john.smith@abcdist.com,+1-555-0123,+1-555-0124,United States,Sales Manager,Active,English,Email,10,MBA Marketing
+Sarah,Johnson,Global Health Supplies,Quality Manager,Quality Assurance,sarah.johnson@globalhealth.ca,+1-416-555-0100,+1-416-555-0101,Canada,Quality Manager,Active,English,Phone,15,ISO 9001 Lead Auditor
+Hans,Mueller,European Aloe Co,Regulatory Affairs Manager,Regulatory,hans.mueller@europealoe.de,+49-30-555-0150,+49-30-555-0151,Germany,Regulatory Affairs Manager,Active,German,Email,12,EU Regulatory Affairs Certificate
+Michael,Chen,Pacific Natural Products,Product Manager,Product Development,michael.chen@pacificnatural.au,+61-2-555-0200,+61-2-555-0201,Australia,Product Manager,Active,English,Video Call,8,Food Science Degree
+Maria,Garcia,Bio Aloe Solutions,Compliance Officer,Compliance,maria.garcia@bioaloe.mx,+52-55-555-0180,+52-55-555-0181,Mexico,Compliance Officer,Active,Spanish,Email,6,HACCP Certification
+Lisa,Wang,ABC Distribution Ltd,R&D Manager,Research,lisa.wang@abcdist.com,+1-555-0125,+1-555-0126,United States,Product Manager,Active,English,Email,14,PhD Chemistry
+David,Brown,Global Health Supplies,Business Development Manager,Business Development,david.brown@globalhealth.ca,+1-416-555-0102,+1-416-555-0103,Canada,Business Development,Active,English,Phone,9,MBA Business Development
+Anna,Schmidt,European Aloe Co,Quality Control Analyst,Quality Control,anna.schmidt@europealoe.de,+49-30-555-0152,+49-30-555-0153,Germany,Quality Manager,Active,German,Email,7,Laboratory Analyst Certification
+James,Wilson,Pacific Natural Products,Marketing Manager,Marketing,james.wilson@pacificnatural.au,+61-2-555-0202,+61-2-555-0203,Australia,Other,Active,English,Email,11,Marketing Diploma
+Carlos,Rodriguez,Bio Aloe Solutions,Production Manager,Production,carlos.rodriguez@bioaloe.mx,+52-55-555-0182,+52-55-555-0183,Mexico,Other,Active,Spanish,Phone,13,Industrial Engineering

@@ -1,0 +1,6 @@
+organization_name,organization_type,country,territory,status,contact_person,email_id,phone,mobile_no,website,address_line_1,city,state,postal_code,business_focus,annual_revenue,employee_count,regulatory_status
+ABC Distribution Ltd,Distributor,United States,North America,Active,John Smith,john@abcdist.com,+1-555-0123,+1-555-0124,www.abcdist.com,123 Main St,New York,NY,10001,Aloe vera product distribution,5000000,50,Compliant
+Global Health Supplies,Wholesaler,Canada,Canada,Active,Sarah Johnson,sarah@globalhealth.ca,+1-416-555-0100,,www.globalhealth.ca,456 King St,Toronto,ON,M5V 1A1,Natural health product wholesale,2500000,25,Pending Review
+European Aloe Co,Manufacturer,Germany,Europe,Active,Hans Mueller,hans@europealoe.de,+49-30-555-0150,,www.europealoe.de,789 Berlin Str,Berlin,,10115,Aloe vera extraction and processing,10000000,100,Compliant
+Pacific Natural Products,Retailer,Australia,Australia and New Zealand,Active,Michael Chen,michael@pacificnatural.au,+61-2-555-0200,,www.pacificnatural.au,321 Sydney Rd,Melbourne,VIC,3000,Retail natural health products,1500000,15,Compliant
+Bio Aloe Solutions,Supplier,Mexico,Latin America,Active,Maria Garcia,maria@bioaloe.mx,+52-55-555-0180,,www.bioaloe.mx,654 Mexico Ave,Mexico City,CDMX,06000,Organic aloe vera cultivation,3000000,75,Pending Review

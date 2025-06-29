@@ -1,0 +1,31 @@
+{
+ "add_total_row": 1,
+ "columns": [],
+ "creation": "2025-06-07 10:31:09.000000",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "doctype": "Report",
+ "filters": [],
+ "is_standard": "Yes",
+ "modified": "2025-06-07 10:31:09.000000",
+ "modified_by": "Administrator",
+ "module": "sysmayal_module",
+ "name": "Distribution Analytics Report",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "",
+ "ref_doctype": "Distribution Organization",
+ "report_name": "Distribution Analytics Report",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "Distribution Manager"
+  },
+  {
+   "role": "R&D Manager"
+  },
+  {
+   "role": "Compliance Officer"
+  }
+ ]
+}

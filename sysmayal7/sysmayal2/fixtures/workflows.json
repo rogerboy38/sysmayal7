@@ -1,0 +1,131 @@
+[
+  {
+    "doctype": "Workflow",
+    "name": "R&D Project Approval",
+    "document_type": "Product Development Project",
+    "workflow_name": "R&D Project Approval",
+    "is_active": 1,
+    "allow_edit": 1,
+    "allow_delete": 1,
+    "allow_rename": 1,
+    "allow_restrict": 1,
+    "restrict_to_domain": 0,
+    "restrict_to_roles": 0,
+    "restrict_to_users": 0,
+    "restrict_to_user": 0,
+    "restrict_to_user_field": null,
+    "restrict_to_user_value": null,
+    "restrict_to_user_field_type": null,
+    "restrict_to_user_value_type": null,
+    "restrict_to_user_field_options": null,
+    "restrict_to_user_value_options": null,
+    "restrict_to_user_field_label": null,
+    "restrict_to_user_value_label": null,
+    "restrict_to_user_field_description": null,
+    "restrict_to_user_value_description": null,
+    "restrict_to_user_field_help": null,
+    "restrict_to_user_value_help": null,
+    "restrict_to_user_field_required": 0,
+    "restrict_to_user_value_required": 0,
+    "restrict_to_user_field_hidden": 0,
+    "restrict_to_user_value_hidden": 0,
+    "restrict_to_user_field_read_only": 0,
+    "restrict_to_user_value_read_only": 0,
+    "restrict_to_user_field_in_list_view": 0,
+    "restrict_to_user_value_in_list_view": 0,
+    "restrict_to_user_field_in_tree_view": 0,
+    "restrict_to_user_value_in_tree_view": 0,
+    "send_email_alert": 1,
+    "workflow_state_field": "workflow_state",
+    "states": [
+      {
+        "state": "Draft",
+        "doc_status": "0",
+        "allow_edit": "R&D Manager",
+        "is_optional_state": 0
+      },
+      {
+        "state": "Pending Review",
+        "doc_status": "0",
+        "allow_edit": "R&D Manager",
+        "is_optional_state": 0
+      },
+      {
+        "state": "Budget Approval Required",
+        "doc_status": "0",
+        "allow_edit": "Distribution Manager",
+        "is_optional_state": 0
+      },
+      {
+        "state": "Approved",
+        "doc_status": "0",
+        "allow_edit": null,
+        "is_optional_state": 0
+      },
+      {
+        "state": "Rejected",
+        "doc_status": "0",
+        "allow_edit": "R&D Manager",
+        "is_optional_state": 0
+      },
+      {
+        "state": "Revision",
+        "doc_status": "0",
+        "allow_edit": "R&D Manager",
+        "is_optional_state": 0
+      }
+    ],
+    "transitions": [
+      {
+        "state": "Draft",
+        "action": "Submit for Review",
+        "next_state": "Pending Review",
+        "allowed": "R&D Manager"
+      },
+      {
+        "state": "Pending Review",
+        "action": "Request Budget Approval",
+        "next_state": "Budget Approval Required",
+        "allowed": "R&D Manager",
+        "condition": "doc.estimated_investment > 100000"
+      },
+      {
+        "state": "Pending Review",
+        "action": "Approve",
+        "next_state": "Approved",
+        "allowed": "R&D Manager",
+        "condition": "doc.estimated_investment <= 100000"
+      },
+      {
+        "state": "Pending Review",
+        "action": "Reject",
+        "next_state": "Rejected",
+        "allowed": "R&D Manager"
+      },
+      {
+        "state": "Budget Approval Required",
+        "action": "Approve Budget",
+        "next_state": "Approved",
+        "allowed": "Distribution Manager"
+      },
+      {
+        "state": "Budget Approval Required",
+        "action": "Reject Budget",
+        "next_state": "Rejected",
+        "allowed": "Distribution Manager"
+      },
+      {
+        "state": "Rejected",
+        "action": "Request Revision",
+        "next_state": "Revision",
+        "allowed": "R&D Manager"
+      },
+      {
+        "state": "Revision",
+        "action": "Resubmit",
+        "next_state": "Pending Review",
+        "allowed": "R&D Manager"
+      }
+    ]
+  }
+]

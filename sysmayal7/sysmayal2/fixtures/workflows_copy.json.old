@@ -1,0 +1,414 @@
+[
+  {
+    "module": "sysmayal_module",
+    "doctype": "Workflow",
+    "name": "R&D Project Approval",
+    "document_type": "Product Development Project",
+    "workflow_name": "R&D Project Approval",
+    "is_active": 1,
+    "send_email_alert": 1,
+    "workflow_state_field": "workflow_state",
+    "states": [
+      {
+        "state": "Draft",
+        "doc_status": "0",
+        "allow_edit": "R&D Manager",
+        "is_optional_state": 0,
+        "next_action_email_template": null
+      },
+      {
+        "state": "Pending Review",
+        "doc_status": "0", 
+        "allow_edit": "R&D Manager",
+        "is_optional_state": 0,
+        "next_action_email_template": null
+      },
+      {
+        "state": "Budget Approval Required",
+        "doc_status": "0",
+        "allow_edit": "Distribution Manager",
+        "is_optional_state": 0,
+        "next_action_email_template": null
+      },
+      {
+        "state": "Approved",
+        "doc_status": "1",
+        "allow_edit": null,
+        "is_optional_state": 0,
+        "next_action_email_template": null
+      },
+      {
+        "state": "Rejected",
+        "doc_status": "0",
+        "allow_edit": "R&D Manager",
+        "is_optional_state": 0,
+        "next_action_email_template": null
+      },
+      {
+        "state": "On Hold",
+        "doc_status": "0",
+        "allow_edit": "R&D Manager",
+        "is_optional_state": 1,
+        "next_action_email_template": null
+      }
+    ],
+    "transitions": [
+      {
+        "state": "Draft",
+        "action": "Submit for Review",
+        "next_state": "Pending Review",
+        "allowed": "R&D Manager",
+        "allow_self_approval": 0,
+        "condition": null
+      },
+      {
+        "state": "Pending Review",
+        "action": "Request Budget Approval",
+        "next_state": "Budget Approval Required",
+        "allowed": "R&D Manager",
+        "allow_self_approval": 0,
+        "condition": "doc.estimated_investment > 100000"
+      },
+      {
+        "state": "Pending Review",
+        "action": "Approve",
+        "next_state": "Approved",
+        "allowed": "R&D Manager",
+        "allow_self_approval": 0,
+        "condition": "doc.estimated_investment <= 100000"
+      },
+      {
+        "state": "Pending Review",
+        "action": "Reject",
+        "next_state": "Rejected",
+        "allowed": "R&D Manager",
+        "allow_self_approval": 0,
+        "condition": null
+      },
+      {
+        "state": "Budget Approval Required",
+        "action": "Approve Budget",
+        "next_state": "Approved",
+        "allowed": "Distribution Manager",
+        "allow_self_approval": 0,
+        "condition": null
+      },
+      {
+        "state": "Budget Approval Required",
+        "action": "Reject Budget",
+        "next_state": "Rejected",
+        "allowed": "Distribution Manager",
+        "allow_self_approval": 0,
+        "condition": null
+      },
+      {
+        "state": "Approved",
+        "action": "Put on Hold",
+        "next_state": "On Hold",
+        "allowed": "R&D Manager",
+        "allow_self_approval": 1,
+        "condition": null
+      },
+      {
+        "state": "On Hold",
+        "action": "Resume",
+        "next_state": "Approved",
+        "allowed": "R&D Manager",
+        "allow_self_approval": 1,
+        "condition": null
+      },
+      {
+        "state": "Rejected",
+        "action": "Revise and Resubmit",
+        "next_state": "Draft",
+        "allowed": "R&D Manager",
+        "allow_self_approval": 1,
+        "condition": null
+      }
+    ]
+  },
+  {
+    "doctype": "Workflow",
+    "name": "Product Compliance Review",
+    "document_type": "Product Compliance",
+    "workflow_name": "Product Compliance Review",
+    "is_active": 1,
+    "send_email_alert": 1,
+    "workflow_state_field": "workflow_state",
+    "states": [
+      {
+        "state": "Draft",
+        "doc_status": "0",
+        "allow_edit": "Compliance Officer",
+        "is_optional_state": 0,
+        "next_action_email_template": null
+      },
+      {
+        "state": "Under Review",
+        "doc_status": "0",
+        "allow_edit": "Compliance Officer", 
+        "is_optional_state": 0,
+        "next_action_email_template": null
+      },
+      {
+        "state": "Testing Required",
+        "doc_status": "0",
+        "allow_edit": "R&D Manager",
+        "is_optional_state": 0,
+        "next_action_email_template": null
+      },
+      {
+        "state": "Regulatory Submission",
+        "doc_status": "0",
+        "allow_edit": "Compliance Officer",
+        "is_optional_state": 0,
+        "next_action_email_template": null
+      },
+      {
+        "state": "Compliant",
+        "doc_status": "1",
+        "allow_edit": null,
+        "is_optional_state": 0,
+        "next_action_email_template": null
+      },
+      {
+        "state": "Non-Compliant",
+        "doc_status": "0",
+        "allow_edit": "Compliance Officer",
+        "is_optional_state": 0,
+        "next_action_email_template": null
+      },
+      {
+        "state": "Expired",
+        "doc_status": "0",
+        "allow_edit": "Compliance Officer",
+        "is_optional_state": 0,
+        "next_action_email_template": null
+      }
+    ],
+    "transitions": [
+      {
+        "state": "Draft",
+        "action": "Start Review",
+        "next_state": "Under Review",
+        "allowed": "Compliance Officer",
+        "allow_self_approval": 1,
+        "condition": null
+      },
+      {
+        "state": "Under Review",
+        "action": "Require Testing",
+        "next_state": "Testing Required",
+        "allowed": "Compliance Officer",
+        "allow_self_approval": 0,
+        "condition": null
+      },
+      {
+        "state": "Under Review",
+        "action": "Submit to Regulatory",
+        "next_state": "Regulatory Submission",
+        "allowed": "Compliance Officer",
+        "allow_self_approval": 0,
+        "condition": null
+      },
+      {
+        "state": "Under Review",
+        "action": "Mark Non-Compliant",
+        "next_state": "Non-Compliant",
+        "allowed": "Compliance Officer",
+        "allow_self_approval": 0,
+        "condition": null
+      },
+      {
+        "state": "Testing Required",
+        "action": "Testing Complete",
+        "next_state": "Under Review",
+        "allowed": "R&D Manager",
+        "allow_self_approval": 0,
+        "condition": null
+      },
+      {
+        "state": "Regulatory Submission",
+        "action": "Approval Received",
+        "next_state": "Compliant",
+        "allowed": "Compliance Officer",
+        "allow_self_approval": 0,
+        "condition": null
+      },
+      {
+        "state": "Regulatory Submission",
+        "action": "Submission Rejected",
+        "next_state": "Non-Compliant",
+        "allowed": "Compliance Officer",
+        "allow_self_approval": 0,
+        "condition": null
+      },
+      {
+        "state": "Compliant",
+        "action": "Mark Expired",
+        "next_state": "Expired",
+        "allowed": "Compliance Officer",
+        "allow_self_approval": 1,
+        "condition": null
+      },
+      {
+        "state": "Non-Compliant",
+        "action": "Restart Review",
+        "next_state": "Draft",
+        "allowed": "Compliance Officer",
+        "allow_self_approval": 1,
+        "condition": null
+      },
+      {
+        "state": "Expired",
+        "action": "Renew Compliance",
+        "next_state": "Draft",
+        "allowed": "Compliance Officer",
+        "allow_self_approval": 1,
+        "condition": null
+      }
+    ]
+  },
+  {
+    "doctype": "Workflow",
+    "name": "Market Entry Plan Approval",
+    "document_type": "Market Entry Plan",
+    "workflow_name": "Market Entry Plan Approval",
+    "is_active": 1,
+    "send_email_alert": 1,
+    "workflow_state_field": "workflow_state",
+    "states": [
+      {
+        "state": "Planning",
+        "doc_status": "0",
+        "allow_edit": "Distribution Manager",
+        "is_optional_state": 0,
+        "next_action_email_template": null
+      },
+      {
+        "state": "Market Analysis Review",
+        "doc_status": "0",
+        "allow_edit": "Market Analyst",
+        "is_optional_state": 0,
+        "next_action_email_template": null
+      },
+      {
+        "state": "Regulatory Review",
+        "doc_status": "0",
+        "allow_edit": "Compliance Officer",
+        "is_optional_state": 0,
+        "next_action_email_template": null
+      },
+      {
+        "state": "Executive Approval",
+        "doc_status": "0",
+        "allow_edit": "System Manager",
+        "is_optional_state": 0,
+        "next_action_email_template": null
+      },
+      {
+        "state": "Approved",
+        "doc_status": "1",
+        "allow_edit": null,
+        "is_optional_state": 0,
+        "next_action_email_template": null
+      },
+      {
+        "state": "Rejected",
+        "doc_status": "0",
+        "allow_edit": "Distribution Manager",
+        "is_optional_state": 0,
+        "next_action_email_template": null
+      },
+      {
+        "state": "On Hold",
+        "doc_status": "0",
+        "allow_edit": "Distribution Manager",
+        "is_optional_state": 1,
+        "next_action_email_template": null
+      }
+    ],
+    "transitions": [
+      {
+        "state": "Planning",
+        "action": "Submit for Market Analysis",
+        "next_state": "Market Analysis Review",
+        "allowed": "Distribution Manager",
+        "allow_self_approval": 0,
+        "condition": null
+      },
+      {
+        "state": "Market Analysis Review",
+        "action": "Market Analysis Approved",
+        "next_state": "Regulatory Review",
+        "allowed": "Market Analyst",
+        "allow_self_approval": 0,
+        "condition": null
+      },
+      {
+        "state": "Market Analysis Review",
+        "action": "Return for Revision",
+        "next_state": "Planning",
+        "allowed": "Market Analyst",
+        "allow_self_approval": 0,
+        "condition": null
+      },
+      {
+        "state": "Regulatory Review",
+        "action": "Regulatory Approved",
+        "next_state": "Executive Approval",
+        "allowed": "Compliance Officer",
+        "allow_self_approval": 0,
+        "condition": null
+      },
+      {
+        "state": "Regulatory Review",
+        "action": "Regulatory Issues Found",
+        "next_state": "Planning",
+        "allowed": "Compliance Officer",
+        "allow_self_approval": 0,
+        "condition": null
+      },
+      {
+        "state": "Executive Approval",
+        "action": "Final Approval",
+        "next_state": "Approved",
+        "allowed": "System Manager",
+        "allow_self_approval": 0,
+        "condition": null
+      },
+      {
+        "state": "Executive Approval",
+        "action": "Reject Plan",
+        "next_state": "Rejected",
+        "allowed": "System Manager",
+        "allow_self_approval": 0,
+        "condition": null
+      },
+      {
+        "state": "Approved",
+        "action": "Put on Hold",
+        "next_state": "On Hold",
+        "allowed": "Distribution Manager",
+        "allow_self_approval": 1,
+        "condition": null
+      },
+      {
+        "state": "On Hold",
+        "action": "Resume Plan",
+        "next_state": "Approved",
+        "allowed": "Distribution Manager",
+        "allow_self_approval": 1,
+        "condition": null
+      },
+      {
+        "state": "Rejected",
+        "action": "Revise and Resubmit",
+        "next_state": "Planning",
+        "allowed": "Distribution Manager",
+        "allow_self_approval": 1,
+        "condition": null
+      }
+    ]
+  }
+]

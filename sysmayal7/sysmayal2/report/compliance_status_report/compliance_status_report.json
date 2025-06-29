@@ -1,0 +1,31 @@
+{
+ "add_total_row": 1,
+ "columns": [],
+ "creation": "2025-06-07 10:31:09.000000",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "doctype": "Report",
+ "filters": [],
+ "is_standard": "Yes",
+ "modified": "2025-06-07 10:31:09.000000",
+ "modified_by": "Administrator",
+ "module": "sysmayal_module",
+ "name": "Compliance Status Report",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "",
+ "ref_doctype": "Product Compliance",
+ "report_name": "Compliance Status Report",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "Compliance Officer"
+  },
+  {
+   "role": "Distribution Manager"
+  },
+  {
+   "role": "R&D Manager"
+  }
+ ]
+}
