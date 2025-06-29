@@ -93,7 +93,7 @@ class CountryRegulation(WebsiteGenerator):
     
     def before_save(self):
         """Set route before saving"""
-        super().before_save()
+        #super().before_save()
         if not getattr(self, 'route', None):
             if getattr(self, 'country_name', None):
                 self.route = self.scrub(f"regulations-{self.country_name}")

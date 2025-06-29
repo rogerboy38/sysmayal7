@@ -196,7 +196,7 @@ class ProductCompliance(WebsiteGenerator):
     
     def before_save(self):
         """Set route before saving"""
-        super().before_save()
+        #super().before_save()
         if not getattr(self, 'route', None):
             product = getattr(self, 'product_name', '') or getattr(self, 'item_code', '')
             country = getattr(self, 'country', '') or getattr(self, 'region', '')

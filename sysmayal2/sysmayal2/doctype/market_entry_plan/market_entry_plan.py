@@ -287,7 +287,7 @@ class MarketEntryPlan(WebsiteGenerator):
     
     def before_save(self):
         """Set route before saving"""
-        super().before_save()
+        #super().before_save()
         if not getattr(self, 'route', None) and getattr(self, 'plan_title', None):
             self.route = self.scrub(self.plan_title)
     
