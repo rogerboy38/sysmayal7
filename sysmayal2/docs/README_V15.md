@@ -148,7 +148,7 @@ sysmayal/
 ├── manifest.json            # App manifest for V15
 ├── requirements.txt         # Updated dependencies
 ├── setup.py                 # Legacy setup support
-├── sysmayal_module/
+├── sysmayal2/
 │   ├── __init__.py         # Version 2.1.1
 │   ├── hooks.py            # V15 compatible hooks
 │   ├── setup/

@@ -188,7 +188,7 @@ def setup_workspace():
     if not frappe.db.exists("Workspace", "Sysmayal"):
         workspace = frappe.new_doc("Workspace")
         workspace.title = "Sysmayal"
-        workspace.module = "sysmayal_module"
+        workspace.module = "sysmayal2"
         workspace.category = "Modules"
         workspace.icon = "globe"
         workspace.public = 1

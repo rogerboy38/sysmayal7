@@ -7,7 +7,7 @@ from . import __version__ as app_version
 """
 
 
-# module_name = "sysmayal_module"
+# module_name = "sysmayal2"
 app_name = "sysmayal"
 app_title = "sysmayal"
 app_publisher = "Sysmayal Development Team"
@@ -203,7 +203,7 @@ user_data_fields = [
 # --------------------------------
 
 # auth_hooks = [
-# 	"sysmayal_module.auth.validate"
+# 	"sysmayal2.auth.validate"
 # ]
 
 # Translation
@@ -294,14 +294,14 @@ fixtures = [
 # Scheduled tasks for compliance monitoring
 scheduler_events = {
     "daily": [
-        "sysmayal_module.tasks.check_certification_expiry",
-        "sysmayal_module.tasks.update_compliance_status"
+        "sysmayal2.tasks.check_certification_expiry",
+        "sysmayal2.tasks.update_compliance_status"
     ],
     "weekly": [
-        "sysmayal_module.tasks.generate_compliance_reports"
+        "sysmayal2.tasks.generate_compliance_reports"
     ],
     "monthly": [
-        "sysmayal_module.tasks.archive_old_documents"
+        "sysmayal2.tasks.archive_old_documents"
     ]
 }
 

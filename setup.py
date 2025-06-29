@@ -11,7 +11,7 @@ with open("requirements.txt") as f:
     install_requires = f.read().strip().split("\n")
 
 # get version from __version__ variable in sysmayal/__init__.py
-from sysmayal_module import __version__ as version
+from sysmayal2 import __version__ as version
 
 setup(
     name="sysmayal",

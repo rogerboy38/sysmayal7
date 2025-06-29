@@ -386,7 +386,7 @@ def check_doctype_website_config(doctype_name):
         
         # Check if controller can be imported
         module_name = doctype_name.lower().replace(" ", "_")
-        module_path = f"sysmayal_module.doctype.{module_name}.{module_name}"
+        module_path = f"sysmayal2.doctype.{module_name}.{module_name}"
         
         try:
             controller_module = frappe.get_module(module_path)
