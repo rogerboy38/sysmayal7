@@ -252,7 +252,7 @@ function clear_territory(frm) {
 
 function check_duplicate_organization(frm) {
     frappe.call({
-        method: 'sysmayal.sysmayal_module.doctype.distribution_organization.distribution_organization.check_duplicate_organization',
+        method: 'sysmayal2.sysmayal2.doctype.distribution_organization.distribution_organization.check_duplicate_organization',
         args: {
             organization_name: frm.doc.organization_name,
             country: frm.doc.country
@@ -328,7 +328,7 @@ function perform_pre_save_validations(frm) {
 
 function show_organization_hierarchy(frm) {
     frappe.call({
-        method: 'sysmayal.sysmayal_module.doctype.distribution_organization.distribution_organization.get_organization_hierarchy',
+        method: 'sysmayal2.sysmayal2.doctype.distribution_organization.distribution_organization.get_organization_hierarchy',
         args: {
             organization_name: frm.doc.name
         },

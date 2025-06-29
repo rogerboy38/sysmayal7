@@ -206,7 +206,7 @@ function send_compliance_alerts(report) {
         __("Send compliance alerts for {0} products?", [alerts_needed.length]),
         function() {
             frappe.call({
-                method: "sysmayal.sysmayal_module.report.compliance_status_report.compliance_status_report.send_compliance_alerts",
+                method: "sysmayal2.sysmayal2.report.compliance_status_report.compliance_status_report.send_compliance_alerts",
                 args: {
                     products: alerts_needed
                 },
@@ -250,7 +250,7 @@ function bulk_update_compliance_status(report) {
             const product_names = selected_rows.map(idx => report.data[idx].name);
             
             frappe.call({
-                method: "sysmayal.sysmayal_module.doctype.product_compliance.product_compliance.bulk_update_compliance_status",
+                method: "sysmayal2.sysmayal2.doctype.product_compliance.product_compliance.bulk_update_compliance_status",
                 args: {
                     product_names: product_names,
                     new_status: values.new_status,

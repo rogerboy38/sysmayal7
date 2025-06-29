@@ -156,7 +156,7 @@ function show_distribution_summary(report) {
     const filters = report.get_values();
     
     frappe.call({
-        method: "sysmayal.sysmayal_module.report.distribution_analytics_report.distribution_analytics_report.get_distribution_summary",
+        method: "sysmayal2.sysmayal2.report.distribution_analytics_report.distribution_analytics_report.get_distribution_summary",
         args: { filters: filters },
         callback: function(r) {
             if (r.message) {
@@ -170,7 +170,7 @@ function show_performance_metrics(report) {
     const filters = report.get_values();
     
     frappe.call({
-        method: "sysmayal.sysmayal_module.report.distribution_analytics_report.distribution_analytics_report.get_performance_metrics",
+        method: "sysmayal2.sysmayal2.report.distribution_analytics_report.distribution_analytics_report.get_performance_metrics",
         args: { filters: filters },
         callback: function(r) {
             if (r.message) {
@@ -184,7 +184,7 @@ function show_contact_analytics(report) {
     const filters = report.get_values();
     
     frappe.call({
-        method: "sysmayal.sysmayal_module.report.distribution_analytics_report.distribution_analytics_report.get_contact_analytics",
+        method: "sysmayal2.sysmayal2.report.distribution_analytics_report.distribution_analytics_report.get_contact_analytics",
         args: { filters: filters },
         callback: function(r) {
             if (r.message) {

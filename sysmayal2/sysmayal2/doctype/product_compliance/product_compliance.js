@@ -190,7 +190,7 @@ function setup_compliance_tracking(frm) {
     // Set up automatic compliance tracking
     if (frm.doc.country && frm.doc.product_name) {
         frappe.call({
-            method: "sysmayal.sysmayal_module.doctype.product_compliance.product_compliance.get_compliance_requirements",
+            method: "sysmayal2.sysmayal2.doctype.product_compliance.product_compliance.get_compliance_requirements",
             args: {
                 country: frm.doc.country,
                 product_category: frm.doc.product_category
@@ -279,7 +279,7 @@ function show_workflow_actions(frm) {
 
 function generate_compliance_certificate(frm) {
     frappe.call({
-        method: "sysmayal.sysmayal_module.doctype.product_compliance.product_compliance.generate_compliance_certificate",
+        method: "sysmayal2.sysmayal2.doctype.product_compliance.product_compliance.generate_compliance_certificate",
         args: {
             "compliance_name": frm.doc.name
         },
@@ -298,7 +298,7 @@ function renew_compliance(frm) {
         __("Are you sure you want to renew this compliance record?"),
         function() {
             frappe.call({
-                method: "sysmayal.sysmayal_module.doctype.product_compliance.product_compliance.renew_compliance",
+                method: "sysmayal2.sysmayal2.doctype.product_compliance.product_compliance.renew_compliance",
                 args: {
                     "compliance_name": frm.doc.name
                 },
@@ -343,7 +343,7 @@ function request_product_testing(frm) {
         primary_action_label: __("Request Testing"),
         primary_action: function(values) {
             frappe.call({
-                method: "sysmayal.sysmayal_module.doctype.product_compliance.product_compliance.request_testing",
+                method: "sysmayal2.sysmayal2.doctype.product_compliance.product_compliance.request_testing",
                 args: {
                     "compliance_name": frm.doc.name,
                     "test_details": values

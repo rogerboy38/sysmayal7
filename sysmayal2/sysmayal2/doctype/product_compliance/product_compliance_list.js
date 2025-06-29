@@ -214,7 +214,7 @@ function bulk_update_compliance_status(listview) {
             }
             
             frappe.call({
-                method: "sysmayal.sysmayal_module.doctype.product_compliance.product_compliance.bulk_update_compliance_status",
+                method: "sysmayal2.sysmayal2.doctype.product_compliance.product_compliance.bulk_update_compliance_status",
                 args: {
                     filters: filters,
                     new_status: values.new_status,
@@ -238,7 +238,7 @@ function export_compliance_data(listview) {
     let filters = listview.get_filters_for_args();
     
     frappe.call({
-        method: "sysmayal.sysmayal_module.doctype.product_compliance.product_compliance.export_compliance_data",
+        method: "sysmayal2.sysmayal2.doctype.product_compliance.product_compliance.export_compliance_data",
         args: {
             filters: filters
         },
@@ -253,7 +253,7 @@ function export_compliance_data(listview) {
 
 function show_expiry_alerts(listview) {
     frappe.call({
-        method: "sysmayal.sysmayal_module.doctype.product_compliance.product_compliance.get_expiry_alerts",
+        method: "sysmayal2.sysmayal2.doctype.product_compliance.product_compliance.get_expiry_alerts",
         callback: function(r) {
             if (r.message) {
                 show_expiry_alerts_dialog(r.message);
@@ -332,7 +332,7 @@ function bulk_update_selected_compliance(selection) {
             let names = selection.map(item => item.name);
             
             frappe.call({
-                method: "sysmayal.sysmayal_module.doctype.product_compliance.product_compliance.bulk_update_compliance_status",
+                method: "sysmayal2.sysmayal2.doctype.product_compliance.product_compliance.bulk_update_compliance_status",
                 args: {
                     product_names: names,
                     new_status: values.new_status,

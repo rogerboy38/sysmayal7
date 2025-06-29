@@ -124,7 +124,7 @@ class SysmayalBulkImporter:
                 
             # Import country regulations
             result = frappe.call(
-                "sysmayal.sysmayal_module.doctype.country_regulation.country_regulation.import_regulation_data",
+                "sysmayal2.sysmayal2.doctype.country_regulation.country_regulation.import_regulation_data",
                 regulation_data=regulation_data
             )
             

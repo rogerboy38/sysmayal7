@@ -213,7 +213,7 @@ function show_portfolio_summary(report) {
     const filters = report.get_values();
     
     frappe.call({
-        method: "sysmayal.sysmayal_module.report.rd_project_status_report.rd_project_status_report.get_project_portfolio_summary",
+        method: "sysmayal2.sysmayal2.report.rd_project_status_report.rd_project_status_report.get_project_portfolio_summary",
         args: { filters: filters },
         callback: function(r) {
             if (r.message) {
@@ -227,7 +227,7 @@ function show_performance_metrics(report) {
     const filters = report.get_values();
     
     frappe.call({
-        method: "sysmayal.sysmayal_module.report.rd_project_status_report.rd_project_status_report.get_project_performance_metrics",
+        method: "sysmayal2.sysmayal2.report.rd_project_status_report.rd_project_status_report.get_project_performance_metrics",
         args: { filters: filters },
         callback: function(r) {
             if (r.message) {
@@ -241,7 +241,7 @@ function show_risk_analysis(report) {
     const filters = report.get_values();
     
     frappe.call({
-        method: "sysmayal.sysmayal_module.report.rd_project_status_report.rd_project_status_report.get_project_risks_and_issues",
+        method: "sysmayal2.sysmayal2.report.rd_project_status_report.rd_project_status_report.get_project_risks_and_issues",
         args: { filters: filters },
         callback: function(r) {
             if (r.message) {

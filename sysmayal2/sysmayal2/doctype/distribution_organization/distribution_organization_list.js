@@ -34,7 +34,7 @@ frappe.listview_settings['Distribution Organization'] = {
         
         listview.page.add_menu_item(__("Bulk Import"), function() {
             frappe.call({
-                method: "sysmayal.sysmayal_module_module_module_module_module_module_module_module_module_module_module_module_module_module_module_module_module_module_module_module_module.data_import.bulk_importer.get_import_template",
+                method: "sysmayal2.sysmayal2.data_import.bulk_importer.get_import_template",
                 args: {"doctype": "Distribution Organization"},
                 callback: function(r) {
                     if (r.message) {
@@ -115,7 +115,7 @@ function export_organizations_data(listview) {
     let filters = listview.get_filters_for_args();
     
     frappe.call({
-        method: "sysmayal.sysmayal_module.data_import.bulk_importer.export_organizations",
+        method: "sysmayal2.sysmayal2.data_import.bulk_importer.export_organizations",
         args: {
             "filters": filters
         },
