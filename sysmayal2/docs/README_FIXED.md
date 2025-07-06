@@ -118,7 +118,7 @@ Sysmayal is a comprehensive Frappe application for managing aloe vera product di
 cd /path/to/frappe-bench
 
 # Install the FIXED app
-bench get-app sysmayal https://github.com/rogerboy38/sysmayal2.git
+bench get-app sysmayal https://github.com/rogerboy38/sysmayal.git
 
 # Install on your site
 bench --site your-site.com install-app sysmayal
@@ -137,7 +137,7 @@ bench restart
 
 ```bash
 # Copy the app to your apps directory
-cp -r sysmayal_fixed /path/to/frappe-bench/apps/sysmayal
+cp -r sysmayal /path/to/frappe-bench/apps/sysmayal
 
 # Install dependencies
 cd /path/to/frappe-bench/apps/sysmayal
@@ -425,7 +425,7 @@ compliance.insert()
 bench --site your-site.com backup
 
 # 2. Install the fixed version
-bench get-app sysmayal https://github.com/rogerboy38/sysmayal2.git
+bench get-app sysmayal https://github.com/rogerboy38/sysmayal.git
 
 # 3. Run migrations (this applies all fixes)
 bench --site your-site.com migrate
@@ -490,7 +490,7 @@ We welcome contributions to improve Sysmayal!
 ### **Development Setup**
 ```bash
 # Fork and clone the repository
-git clone https://github.com/your-username/sysmayal2.git
+git clone https://github.com/your-username/sysmayal.git
 
 # Create development branch
 git checkout -b feature/your-feature-name
@@ -515,7 +515,7 @@ git push origin feature/your-feature-name
 ### **Technical Support**
 - 📧 **Email**: support@sysmayal.com
 - 💬 **Community**: [Frappe Community Forum](https://discuss.frappe.io)
-- 🐛 **Bug Reports**: [GitHub Issues](https://github.com/rogerboy38/sysmayal2/issues)
+- 🐛 **Bug Reports**: [GitHub Issues](https://github.com/rogerboy38/sysmayal/issues)
 - 📚 **Documentation**: Available in `docs/` directory
 
 ### **Professional Services**

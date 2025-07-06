@@ -1,6 +1,6 @@
 [
   {
-    "module": "sysmayal2",
+    "module": "sysmayal",
     "doctype": "Workflow",
     "name": "R&D Project Approval",
     "document_type": "Product Development Project",

@@ -11,7 +11,7 @@ This guide covers the complete process of deploying the fixed Sysmayal system fr
 ### **1. Verify All Fixes Applied**
 ```bash
 # Check that all problematic DocTypes are fixed
-cd /workspace/sysmayal_fixed
+cd /workspace/sysmayal
 
 # Verify Market Entry Plan fix
 grep -n "WebsiteGenerator" sysmayal/sysmayal/doctype/market_entry_plan/market_entry_plan.py
@@ -30,7 +30,7 @@ grep -n "website.*condition_field" sysmayal/sysmayal/doctype/product_compliance/
 ```bash
 # Create clean deployment package
 cd /workspace
-tar -czf sysmayal-v2.1.0-fixed.tar.gz sysmayal_fixed/
+tar -czf sysmayal-v2.1.0-fixed.tar.gz sysmayal/
 
 # Create checksums for verification
 md5sum sysmayal-v2.1.0-fixed.tar.gz > sysmayal-v2.1.0-fixed.md5
@@ -43,13 +43,13 @@ sha256sum sysmayal-v2.1.0-fixed.tar.gz > sysmayal-v2.1.0-fixed.sha256
 
 ### **1. Initialize Git Repository**
 ```bash
-cd /workspace/sysmayal_fixed
+cd /workspace/sysmayal
 
 # Initialize git if not already done
 git init
 
 # Set up remote repository
-git remote add origin https://github.com/rogerboy38/sysmayal2.git
+git remote add origin https://github.com/rogerboy38/sysmayal.git
 
 # Set up gitignore
 cat > .gitignore << 'EOF'
@@ -189,7 +189,7 @@ This release resolves all `AttributeError: 'DocType' has no attribute 'website'`
 
 ### Quick Install:
 ```bash
-bench get-app sysmayal https://github.com/rogerboy38/sysmayal2.git
+bench get-app sysmayal https://github.com/rogerboy38/sysmayal.git
 bench --site your-site install-app sysmayal
 bench --site your-site migrate
 bench restart
@@ -233,7 +233,7 @@ None - This is a backward-compatible fix release.
 ## 📞 Support
 
 - Documentation: See README_FIXED.md for complete details
-- Issues: https://github.com/rogerboy38/sysmayal2/issues
+- Issues: https://github.com/rogerboy38/sysmayal/issues
 - Community: https://discuss.frappe.io
 
 **This version is production-ready and resolves all known website attribute errors.**
@@ -254,7 +254,7 @@ echo "🌐 Upload this file when creating the GitHub release"
 cd /path/to/test-frappe-bench
 
 # Install from GitHub
-bench get-app sysmayal https://github.com/rogerboy38/sysmayal2.git
+bench get-app sysmayal https://github.com/rogerboy38/sysmayal.git
 
 # Install on test site
 bench --site test.localhost install-app sysmayal
@@ -283,7 +283,7 @@ bench --site production.example.com backup
 
 # Install the fixed app
 cd /path/to/production-frappe-bench
-bench get-app sysmayal https://github.com/rogerboy38/sysmayal2.git
+bench get-app sysmayal https://github.com/rogerboy38/sysmayal.git
 
 # Install on production site
 bench --site production.example.com install-app sysmayal
@@ -386,7 +386,7 @@ def check_doctype_website_config(doctype_name):
         
         # Check if controller can be imported
         module_name = doctype_name.lower().replace(" ", "_")
-        module_path = f"sysmayal2.doctype.{module_name}.{module_name}"
+        module_path = f"sysmayal.doctype.{module_name}.{module_name}"
         
         try:
             controller_module = frappe.get_module(module_path)
@@ -633,7 +633,7 @@ bench --site your-site console
 4. **Get help:**
    - 📧 Email: support@sysmayal.com
    - 💬 Community: https://discuss.frappe.io
-   - 🐛 Issues: https://github.com/rogerboy38/sysmayal2/issues
+   - 🐛 Issues: https://github.com/rogerboy38/sysmayal/issues
 
 ---
 

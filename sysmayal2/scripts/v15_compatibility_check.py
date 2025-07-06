@@ -140,7 +140,7 @@ def run_compatibility_check():
         print("🎉 All compatibility checks passed!")
         print("✅ Sysmayal is ready for installation on your V15 system.")
         print("\nNext steps:")
-        print("1. bench get-app sysmayal https://github.com/rogerboy38/sysmayal2.git")
+        print("1. bench get-app sysmayal https://github.com/rogerboy38/sysmayal.git")
         print("2. bench --site your-site install-app sysmayal")
         print("3. bench --site your-site migrate")
         return True

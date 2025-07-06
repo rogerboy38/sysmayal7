@@ -1,5 +1,5 @@
-app_name = "sysmayal2"
-app_title = "Sysmayal2"
+app_name = "sysmayal"
+app_title = "sysmayal"
 app_publisher = "AMB-Wellness"
 app_description = "Global Distribution & R&D Management for BioPolimers"
 app_email = "fcrm@amb-wellness.com"
@@ -13,11 +13,11 @@ app_license = "mit"
 # Each item in the list will be shown as an app in the apps page
 # add_to_apps_screen = [
 # 	{
-# 		"name": "sysmayal2",
-# 		"logo": "/assets/sysmayal2/logo.png",
-# 		"title": "Sysmayal2",
-# 		"route": "/sysmayal2",
-# 		"has_permission": "sysmayal2.api.permission.has_app_permission"
+# 		"name": "sysmayal",
+# 		"logo": "/assets/sysmayal/logo.png",
+# 		"title": "sysmayal",
+# 		"route": "/sysmayal",
+# 		"has_permission": "sysmayal.api.permission.has_app_permission"
 # 	}
 # ]
 
@@ -25,15 +25,15 @@ app_license = "mit"
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/sysmayal2/css/sysmayal2.css"
-# app_include_js = "/assets/sysmayal2/js/sysmayal2.js"
+# app_include_css = "/assets/sysmayal/css/sysmayal.css"
+# app_include_js = "/assets/sysmayal/js/sysmayal.js"
 
 # include js, css files in header of web template
-# web_include_css = "/assets/sysmayal2/css/sysmayal2.css"
-# web_include_js = "/assets/sysmayal2/js/sysmayal2.js"
+# web_include_css = "/assets/sysmayal/css/sysmayal.css"
+# web_include_js = "/assets/sysmayal/js/sysmayal.js"
 
 # include custom scss in every website theme (without file extension ".scss")
-# website_theme_scss = "sysmayal2/public/scss/website"
+# website_theme_scss = "sysmayal/public/scss/website"
 
 # include js, css files in header of web form
 # webform_include_js = {"doctype": "public/js/doctype.js"}
@@ -51,7 +51,7 @@ app_license = "mit"
 # Svg Icons
 # ------------------
 # include app icons in desk
-# app_include_icons = "sysmayal2/public/icons.svg"
+# app_include_icons = "sysmayal/public/icons.svg"
 
 # Home Pages
 # ----------
@@ -78,43 +78,43 @@ app_license = "mit"
 
 # add methods and filters to jinja environment
 # jinja = {
-# 	"methods": "sysmayal2.utils.jinja_methods",
-# 	"filters": "sysmayal2.utils.jinja_filters"
+# 	"methods": "sysmayal.utils.jinja_methods",
+# 	"filters": "sysmayal.utils.jinja_filters"
 # }
 
 # Installation
 # ------------
 
-# before_install = "sysmayal2.install.before_install"
-# after_install = "sysmayal2.install.after_install"
+# before_install = "sysmayal.install.before_install"
+# after_install = "sysmayal.install.after_install"
 
 # Uninstallation
 # ------------
 
-# before_uninstall = "sysmayal2.uninstall.before_uninstall"
-# after_uninstall = "sysmayal2.uninstall.after_uninstall"
+# before_uninstall = "sysmayal.uninstall.before_uninstall"
+# after_uninstall = "sysmayal.uninstall.after_uninstall"
 
 # Integration Setup
 # ------------------
 # To set up dependencies/integrations with other apps
 # Name of the app being installed is passed as an argument
 
-# before_app_install = "sysmayal2.utils.before_app_install"
-# after_app_install = "sysmayal2.utils.after_app_install"
+# before_app_install = "sysmayal.utils.before_app_install"
+# after_app_install = "sysmayal.utils.after_app_install"
 
 # Integration Cleanup
 # -------------------
 # To clean up dependencies/integrations with other apps
 # Name of the app being uninstalled is passed as an argument
 
-# before_app_uninstall = "sysmayal2.utils.before_app_uninstall"
-# after_app_uninstall = "sysmayal2.utils.after_app_uninstall"
+# before_app_uninstall = "sysmayal.utils.before_app_uninstall"
+# after_app_uninstall = "sysmayal.utils.after_app_uninstall"
 
 # Desk Notifications
 # ------------------
 # See frappe.core.notifications.get_notification_config
 
-# notification_config = "sysmayal2.notifications.get_notification_config"
+# notification_config = "sysmayal.notifications.get_notification_config"
 
 # Permissions
 # -----------
@@ -145,39 +145,39 @@ app_license = "mit"
 
 # scheduler_events = {
 # 	"all": [
-# 		"sysmayal2.tasks.all"
+# 		"sysmayal.tasks.all"
 # 	],
 # 	"daily": [
-# 		"sysmayal2.tasks.daily"
+# 		"sysmayal.tasks.daily"
 # 	],
 # 	"hourly": [
-# 		"sysmayal2.tasks.hourly"
+# 		"sysmayal.tasks.hourly"
 # 	],
 # 	"weekly": [
-# 		"sysmayal2.tasks.weekly"
+# 		"sysmayal.tasks.weekly"
 # 	],
 # 	"monthly": [
-# 		"sysmayal2.tasks.monthly"
+# 		"sysmayal.tasks.monthly"
 # 	],
 # }
 
 # Testing
 # -------
 
-# before_tests = "sysmayal2.install.before_tests"
+# before_tests = "sysmayal.install.before_tests"
 
 # Overriding Methods
 # ------------------------------
 #
 # override_whitelisted_methods = {
-# 	"frappe.desk.doctype.event.event.get_events": "sysmayal2.event.get_events"
+# 	"frappe.desk.doctype.event.event.get_events": "sysmayal.event.get_events"
 # }
 #
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,
 # along with any modifications made in other Frappe apps
 # override_doctype_dashboards = {
-# 	"Task": "sysmayal2.task.get_dashboard_data"
+# 	"Task": "sysmayal.task.get_dashboard_data"
 # }
 
 # exempt linked doctypes from being automatically cancelled
@@ -191,13 +191,13 @@ app_license = "mit"
 
 # Request Events
 # ----------------
-# before_request = ["sysmayal2.utils.before_request"]
-# after_request = ["sysmayal2.utils.after_request"]
+# before_request = ["sysmayal.utils.before_request"]
+# after_request = ["sysmayal.utils.after_request"]
 
 # Job Events
 # ----------
-# before_job = ["sysmayal2.utils.before_job"]
-# after_job = ["sysmayal2.utils.after_job"]
+# before_job = ["sysmayal.utils.before_job"]
+# after_job = ["sysmayal.utils.after_job"]
 
 # User Data Protection
 # --------------------
@@ -227,7 +227,7 @@ app_license = "mit"
 # --------------------------------
 
 # auth_hooks = [
-# 	"sysmayal2.auth.validate"
+# 	"sysmayal.auth.validate"
 # ]
 
 # Automatically update python controller files with type annotations for this app.

@@ -57,7 +57,7 @@ function add_custom_buttons(frm) {
         // Add Market Intelligence button
         frm.add_custom_button(__('Market Intelligence'), function() {
             frappe.call({
-                method: "sysmayal2.sysmayal2.doctype.market_research.market_research.get_market_intelligence_by_country",
+                method: "sysmayal.sysmayal.doctype.market_research.market_research.get_market_intelligence_by_country",
                 args: {"country": frm.doc.country},
                 callback: function(r) {
                     if (r.message) {
@@ -264,7 +264,7 @@ function update_status_based_on_completion(frm) {
 
 function generate_market_research_report(frm) {
     frappe.call({
-        method: "sysmayal2.sysmayal2.doctype.market_research.market_research.generate_market_report",
+        method: "sysmayal.sysmayal.doctype.market_research.market_research.generate_market_report",
         args: {"research_name": frm.doc.name},
         callback: function(r) {
             if (r.message) {
@@ -291,7 +291,7 @@ function create_market_entry_plan_from_research(frm) {
 
 function show_competitive_analysis(frm) {
     frappe.call({
-        method: "sysmayal2.sysmayal2.doctype.market_research.market_research.get_competitive_analysis_summary",
+        method: "sysmayal.sysmayal.doctype.market_research.market_research.get_competitive_analysis_summary",
         args: {"research_name": frm.doc.name},
         callback: function(r) {
             if (r.message) {
@@ -303,7 +303,7 @@ function show_competitive_analysis(frm) {
 
 function export_research_data(frm) {
     frappe.call({
-        method: "sysmayal2.sysmayal2.doctype.market_research.market_research.generate_market_report",
+        method: "sysmayal.sysmayal.doctype.market_research.market_research.generate_market_report",
         args: {"research_name": frm.doc.name},
         callback: function(r) {
             if (r.message) {
@@ -352,7 +352,7 @@ function share_research_findings(frm) {
         primary_action_label: __("Share"),
         primary_action: function(values) {
             frappe.call({
-                method: "sysmayal2.sysmayal2.doctype.market_research.market_research.share_research",
+                method: "sysmayal.sysmayal.doctype.market_research.market_research.share_research",
                 args: {
                     "research_name": frm.doc.name,
                     "share_with": values.share_with,

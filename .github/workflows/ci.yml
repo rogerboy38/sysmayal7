@@ -7,7 +7,7 @@ on:
   pull_request:
 
 concurrency:
-  group: Main-sysmayal2-${{ github.event.number }}
+  group: Main-sysmayal-${{ github.event.number }}
   cancel-in-progress: true
 
 jobs:
@@ -90,10 +90,10 @@ jobs:
       - name: Install
         working-directory: /home/runner/frappe-bench
         run: |
-          bench get-app sysmayal2 $GITHUB_WORKSPACE
+          bench get-app sysmayal $GITHUB_WORKSPACE
           bench setup requirements --dev
           bench new-site --db-root-password root --admin-password admin test_site
-          bench --site test_site install-app sysmayal2
+          bench --site test_site install-app sysmayal
           bench build
         env:
           CI: 'Yes'
@@ -102,6 +102,6 @@ jobs:
         working-directory: /home/runner/frappe-bench
         run: |
           bench --site test_site set-config allow_tests true
-          bench --site test_site run-tests --app sysmayal2
+          bench --site test_site run-tests --app sysmayal
         env:
           TYPE: server

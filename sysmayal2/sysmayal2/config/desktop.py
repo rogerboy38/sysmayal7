@@ -12,7 +12,7 @@ def get_data():
     
     return [
         {
-            "module_name": "sysmayal2",
+            "module_name": "sysmayal",
             "category": "Modules",
             "label": _("Sysmayal"),
             "color": "green",

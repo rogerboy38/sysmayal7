@@ -7,7 +7,7 @@ from . import __version__ as app_version
 """
 
 
-# module_name = "sysmayal2"
+# module_name = "sysmayal"
 app_name = "sysmayal"
 app_title = "sysmayal"
 app_publisher = "Sysmayal Development Team"
@@ -72,7 +72,7 @@ min_erpnext_version = "15.0.0"
 # ------------
 
 # before_install = "sysmayal.install.before_install"
-after_install = "sysmayal2.setup.install.after_install"
+after_install = "sysmayal.setup.install.after_install"
 
 # Desk Notifications
 # ------------------
@@ -203,7 +203,7 @@ user_data_fields = [
 # --------------------------------
 
 # auth_hooks = [
-# 	"sysmayal2.auth.validate"
+# 	"sysmayal.auth.validate"
 # ]
 
 # Translation
@@ -294,14 +294,14 @@ fixtures = [
 # Scheduled tasks for compliance monitoring
 scheduler_events = {
     "daily": [
-        "sysmayal2.tasks.check_certification_expiry",
-        "sysmayal2.tasks.update_compliance_status"
+        "sysmayal.tasks.check_certification_expiry",
+        "sysmayal.tasks.update_compliance_status"
     ],
     "weekly": [
-        "sysmayal2.tasks.generate_compliance_reports"
+        "sysmayal.tasks.generate_compliance_reports"
     ],
     "monthly": [
-        "sysmayal2.tasks.archive_old_documents"
+        "sysmayal.tasks.archive_old_documents"
     ]
 }
 

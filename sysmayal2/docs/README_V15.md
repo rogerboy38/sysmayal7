@@ -47,7 +47,7 @@ This version of Sysmayal has been specifically upgraded and tested for **ERPNext
    cd /path/to/your/bench
    
    # Get the app
-   bench get-app sysmayal https://github.com/rogerboy38/sysmayal2.git
+   bench get-app sysmayal https://github.com/rogerboy38/sysmayal.git
    
    # Install on your site
    bench --site your-site-name install-app sysmayal
@@ -112,7 +112,7 @@ This version of Sysmayal has been specifically upgraded and tested for **ERPNext
 pip install --upgrade pip setuptools wheel
 
 # If bench get-app fails
-bench get-app --branch main sysmayal https://github.com/rogerboy38/sysmayal2.git
+bench get-app --branch main sysmayal https://github.com/rogerboy38/sysmayal.git
 ```
 
 #### **Migration Issues**
@@ -148,7 +148,7 @@ sysmayal/
 ├── manifest.json            # App manifest for V15
 ├── requirements.txt         # Updated dependencies
 ├── setup.py                 # Legacy setup support
-├── sysmayal2/
+├── sysmayal/
 │   ├── __init__.py         # Version 2.1.1
 │   ├── hooks.py            # V15 compatible hooks
 │   ├── setup/
@@ -169,8 +169,8 @@ sysmayal/
 ## 🆘 **SUPPORT**
 
 ### **Issues & Bugs**
-- **GitHub Issues**: [Submit Bug Report](https://github.com/rogerboy38/sysmayal2/issues)
-- **Documentation**: [Complete Guide](https://github.com/rogerboy38/sysmayal2/docs)
+- **GitHub Issues**: [Submit Bug Report](https://github.com/rogerboy38/sysmayal/issues)
+- **Documentation**: [Complete Guide](https://github.com/rogerboy38/sysmayal/docs)
 
 ### **Community**
 - **Discussions**: Use GitHub Discussions for questions

@@ -22,7 +22,7 @@ bench version
 cd /path/to/your/bench
 
 # Get the V15-ready Sysmayal app
-bench get-app sysmayal https://github.com/rogerboy38/sysmayal2.git
+bench get-app sysmayal https://github.com/rogerboy38/sysmayal.git
 
 # Install on your site
 bench --site your-site-name install-app sysmayal
@@ -70,7 +70,7 @@ After installation, verify these work without errors:
 ```bash
 # Update pip and try again
 pip install --upgrade pip setuptools wheel
-bench get-app sysmayal https://github.com/rogerboy38/sysmayal2.git --force
+bench get-app sysmayal https://github.com/rogerboy38/sysmayal.git --force
 ```
 
 #### **Migration errors**
@@ -92,7 +92,7 @@ bench restart
 If you encounter issues:
 1. Check the [troubleshooting section](#troubleshooting) above
 2. Review the complete [README_V15.md](README_V15.md)
-3. Submit an issue on [GitHub](https://github.com/rogerboy38/sysmayal2/issues)
+3. Submit an issue on [GitHub](https://github.com/rogerboy38/sysmayal/issues)
 
 ---
 

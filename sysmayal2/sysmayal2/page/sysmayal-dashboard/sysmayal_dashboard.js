@@ -310,7 +310,7 @@ class SysmayalDashboard {
 
     async get_market_plans_data() {
         return await frappe.call({
-            method: 'sysmayal2.doctype.market_entry_plan.market_entry_plan.get_market_entry_dashboard'
+            method: 'sysmayal.doctype.market_entry_plan.market_entry_plan.get_market_entry_dashboard'
         });
     }
 
