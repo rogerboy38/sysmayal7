@@ -1,6 +1,11 @@
+# Core dependencies
 frappe>=15.0.0
 requests>=2.28.0
 pandas>=1.5.0
 openpyxl>=3.0.10
 xlrd>=2.0.1
 python-dateutil>=2.8.2
+
+# Local app dependencies (add these at the bottom)
+-e apps/rnd_nutrition
+-e apps/tds
